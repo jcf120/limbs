@@ -1,5 +1,7 @@
 #pragma once
 
+#include <windows.h>
+
 namespace Limbs {
 
 	using namespace System;
@@ -18,6 +20,7 @@ namespace Limbs {
 		MainWindow(void)
 		{
 			InitializeComponent();
+			Console::WriteLine("Main");
 			//
 			//TODO: Add the constructor code here
 			//
@@ -35,11 +38,14 @@ namespace Limbs {
 			}
 		}
 
-	private:
+	private: OpenGL::OpenGLControl^  openGLControl1;
+
+
+	private: System::ComponentModel::IContainer^  components;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -48,11 +54,29 @@ namespace Limbs {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MainWindow";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->openGLControl1 = (gcnew OpenGL::OpenGLControl());
+			this->SuspendLayout();
+			// 
+			// openGLControl1
+			// 
+			this->openGLControl1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) 
+				| System::Windows::Forms::AnchorStyles::Left));
+			this->openGLControl1->Location = System::Drawing::Point(0, 0);
+			this->openGLControl1->Name = L"openGLControl1";
+			this->openGLControl1->Size = System::Drawing::Size(269, 332);
+			this->openGLControl1->TabIndex = 0;
+			this->openGLControl1->Text = L"openGLControl1";
+			// 
+			// MainWindow
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(504, 332);
+			this->Controls->Add(this->openGLControl1);
+			this->Name = L"MainWindow";
+			this->Text = L"MainWindow";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	};
