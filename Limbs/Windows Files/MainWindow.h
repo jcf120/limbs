@@ -1,6 +1,7 @@
 #pragma once
 
 #include <windows.h>
+#include "..\Common\Renderer.h"
 
 namespace Limbs {
 
@@ -38,6 +39,7 @@ namespace Limbs {
 			}
 		}
 	private: OpenGL::OpenGLControl^  openGLControl1;
+	private: System::Windows::Forms::Button^  button1;
 	protected: 
 
 	protected: 
@@ -57,6 +59,7 @@ namespace Limbs {
 		void InitializeComponent(void)
 		{
 			this->openGLControl1 = (gcnew OpenGL::OpenGLControl());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// openGLControl1
@@ -69,11 +72,22 @@ namespace Limbs {
 			this->openGLControl1->TabIndex = 0;
 			this->openGLControl1->Text = L"openGLControl1";
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(376, 78);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MainWindow::button1_Click);
+			// 
 			// MainWindow
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(504, 332);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->openGLControl1);
 			this->Name = L"MainWindow";
 			this->Text = L"MainWindow";
@@ -81,5 +95,11 @@ namespace Limbs {
 
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 openGLControl1->Render();
+				 Renderer renderer;
+				 renderer.Render();
+				 openGLControl1->SwapOpenGLBuffers();
+			 }
 	};
 }

@@ -81,9 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Common\Renderer.cpp" />
     <ClCompile Include="Windows Files\MainWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common\Renderer.h" />
     <ClInclude Include="Windows Files\MainWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
