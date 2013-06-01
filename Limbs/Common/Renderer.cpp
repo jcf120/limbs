@@ -1,10 +1,11 @@
 #include "Renderer.h"
 
-#ifdef TARGET_OS_MAC
+#ifdef __APPLE__
   // Mac Includes Here
+    #include <OpenGL/gl.h>
 #endif
 
-#ifdef _WIN32 || _WIN64
+#if defined(_WIN32) || defined(_WIN64)
   // Windows Includes Here
 	#include <windows.h>
 	#include <GL/gl.h>
@@ -23,7 +24,7 @@ Renderer::~Renderer(void)
 
 void Renderer::Render()
 {
-	glClearColor(0.0f, 255.0f, 0.0f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 255.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 

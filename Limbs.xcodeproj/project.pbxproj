@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890FF2C3175A6F11009004E2 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890FF2C1175A6F11009004E2 /* Renderer.cpp */; };
 		89DF24A4175A5C3E0099BBB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DF24A3175A5C3E0099BBB9 /* Cocoa.framework */; };
 		89DF24AE175A5C3E0099BBB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89DF24AC175A5C3E0099BBB9 /* InfoPlist.strings */; };
 		89DF24B0175A5C3E0099BBB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF24AF175A5C3E0099BBB9 /* main.m */; };
 		89DF24B4175A5C3E0099BBB9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 89DF24B2175A5C3E0099BBB9 /* Credits.rtf */; };
-		89DF24B7175A5C3E0099BBB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF24B6175A5C3E0099BBB9 /* AppDelegate.m */; };
+		89DF24B7175A5C3E0099BBB9 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89DF24B6175A5C3E0099BBB9 /* AppDelegate.mm */; };
 		89DF24BA175A5C3F0099BBB9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89DF24B8175A5C3F0099BBB9 /* MainMenu.xib */; };
 		89DF24C2175A5E1E0099BBB9 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DF24C1175A5E1E0099BBB9 /* OpenGLView.m */; };
 		89DF24C4175A679A0099BBB9 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DF24C3175A67990099BBB9 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		890FF2C1175A6F11009004E2 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = Common/Renderer.cpp; sourceTree = "<group>"; };
+		890FF2C2175A6F11009004E2 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderer.h; path = Common/Renderer.h; sourceTree = "<group>"; };
 		89DF24A0175A5C3E0099BBB9 /* Limbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Limbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DF24A3175A5C3E0099BBB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		89DF24A6175A5C3E0099BBB9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -29,7 +32,7 @@
 		89DF24B1175A5C3E0099BBB9 /* Limbs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Limbs-Prefix.pch"; sourceTree = "<group>"; };
 		89DF24B3175A5C3E0099BBB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		89DF24B5175A5C3E0099BBB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Mac Files/AppDelegate.h"; sourceTree = "<group>"; };
-		89DF24B6175A5C3E0099BBB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Mac Files/AppDelegate.m"; sourceTree = "<group>"; };
+		89DF24B6175A5C3E0099BBB9 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "Mac Files/AppDelegate.mm"; sourceTree = "<group>"; };
 		89DF24B9175A5C3F0099BBB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		89DF24C0175A5E1E0099BBB9 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = "Mac Files/OpenGLView.h"; sourceTree = "<group>"; };
 		89DF24C1175A5E1E0099BBB9 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = "Mac Files/OpenGLView.m"; sourceTree = "<group>"; };
@@ -49,10 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890FF2C4175A6F21009004E2 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				890FF2C2175A6F11009004E2 /* Renderer.h */,
+				890FF2C1175A6F11009004E2 /* Renderer.cpp */,
+			);
+			name = "C++";
+			sourceTree = "<group>";
+		};
 		89DF2497175A5C3E0099BBB9 = {
 			isa = PBXGroup;
 			children = (
-				89DF24C3175A67990099BBB9 /* OpenGL.framework */,
 				89DF24A9175A5C3E0099BBB9 /* Limbs */,
 				89DF24A2175A5C3E0099BBB9 /* Frameworks */,
 				89DF24A1175A5C3E0099BBB9 /* Products */,
@@ -70,6 +81,7 @@
 		89DF24A2175A5C3E0099BBB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89DF24C3175A67990099BBB9 /* OpenGL.framework */,
 				89DF24A3175A5C3E0099BBB9 /* Cocoa.framework */,
 				89DF24A5175A5C3E0099BBB9 /* Other Frameworks */,
 			);
@@ -89,10 +101,11 @@
 		89DF24A9175A5C3E0099BBB9 /* Limbs */ = {
 			isa = PBXGroup;
 			children = (
+				890FF2C4175A6F21009004E2 /* C++ */,
 				89DF24C0175A5E1E0099BBB9 /* OpenGLView.h */,
 				89DF24C1175A5E1E0099BBB9 /* OpenGLView.m */,
 				89DF24B5175A5C3E0099BBB9 /* AppDelegate.h */,
-				89DF24B6175A5C3E0099BBB9 /* AppDelegate.m */,
+				89DF24B6175A5C3E0099BBB9 /* AppDelegate.mm */,
 				89DF24B8175A5C3F0099BBB9 /* MainMenu.xib */,
 				89DF24AA175A5C3E0099BBB9 /* Supporting Files */,
 			);
@@ -176,8 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DF24B0175A5C3E0099BBB9 /* main.m in Sources */,
-				89DF24B7175A5C3E0099BBB9 /* AppDelegate.m in Sources */,
+				89DF24B7175A5C3E0099BBB9 /* AppDelegate.mm in Sources */,
 				89DF24C2175A5E1E0099BBB9 /* OpenGLView.m in Sources */,
+				890FF2C3175A6F11009004E2 /* Renderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +327,7 @@
 				89DF24BF175A5C3F0099BBB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

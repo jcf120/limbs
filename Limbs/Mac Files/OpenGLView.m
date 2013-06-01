@@ -30,4 +30,9 @@
         NSLog(@"glGetError(): %d", err);
 }
 
+- (void)reshape
+{
+    
+}
+
 @end

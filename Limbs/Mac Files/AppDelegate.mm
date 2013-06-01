@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#include "Renderer.h"
 
 @implementation AppDelegate
 
@@ -15,4 +16,9 @@
     // Insert code here to initialize your application
 }
 
+- (IBAction)buttonPush:(id)sender {
+    Renderer render;
+    render.Render();
+    [self.openGLView setNeedsDisplay:YES];
+}
 @end
