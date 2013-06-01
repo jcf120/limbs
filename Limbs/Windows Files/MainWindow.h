@@ -37,8 +37,10 @@ namespace Limbs {
 				delete components;
 			}
 		}
-
 	private: OpenGL::OpenGLControl^  openGLControl1;
+	protected: 
+
+	protected: 
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -63,7 +65,7 @@ namespace Limbs {
 				| System::Windows::Forms::AnchorStyles::Left));
 			this->openGLControl1->Location = System::Drawing::Point(0, 0);
 			this->openGLControl1->Name = L"openGLControl1";
-			this->openGLControl1->Size = System::Drawing::Size(269, 332);
+			this->openGLControl1->Size = System::Drawing::Size(240, 334);
 			this->openGLControl1->TabIndex = 0;
 			this->openGLControl1->Text = L"openGLControl1";
 			// 
