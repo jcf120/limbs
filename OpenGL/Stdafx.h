@@ -5,3 +5,5 @@
 #pragma once
 
 
+#include <sstream>
+#include "ogl.h"

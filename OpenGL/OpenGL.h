@@ -3,7 +3,8 @@
 #pragma once
 
 #include <windows.h>
-#include <GL/gl.h>
+
+#include "..\Limbs\Common\Renderer.h"
 
 #using <System.dll>
 #using <System.Windows.Forms.dll>
@@ -19,9 +20,7 @@ namespace OpenGL {
 	public:
 		OpenGLControl();
 
-		virtual Void Render(Void);
-
-		Void SwapOpenGLBuffers(Void);
+		Void RenderScene(Void);
 
 	private:
 		HDC m_hDC;
@@ -31,6 +30,10 @@ namespace OpenGL {
 
 		~OpenGLControl();
 
-		GLint InternalSetPixelFormat(HDC hdc);
+		bool OpenGLControl::Create30Context(HDC hdc);
+
+		Void InitAPI(Void);
+
+		Void OpenGLControl::GetGLVersion(int* major, int* minor);
 	};
 }

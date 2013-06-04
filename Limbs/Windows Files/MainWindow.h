@@ -41,6 +41,10 @@ namespace Limbs {
 
 	private: System::Windows::Forms::Button^  button1;
 	private: OpenGL::OpenGLControl^  openGLControl1;
+
+
+
+
 	protected: 
 
 	protected: 
@@ -75,11 +79,9 @@ namespace Limbs {
 			// 
 			// openGLControl1
 			// 
-			this->openGLControl1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) 
-				| System::Windows::Forms::AnchorStyles::Left));
-			this->openGLControl1->Location = System::Drawing::Point(0, 0);
+			this->openGLControl1->Location = System::Drawing::Point(113, 53);
 			this->openGLControl1->Name = L"openGLControl1";
-			this->openGLControl1->Size = System::Drawing::Size(256, 332);
+			this->openGLControl1->Size = System::Drawing::Size(75, 23);
 			this->openGLControl1->TabIndex = 2;
 			this->openGLControl1->Text = L"openGLControl1";
 			// 
@@ -97,10 +99,7 @@ namespace Limbs {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 openGLControl1->Render();
-				 Renderer renderer;
-				 renderer.Render();
-				 openGLControl1->SwapOpenGLBuffers();
+				 openGLControl1->RenderScene();
 			 }
 	};
 }
